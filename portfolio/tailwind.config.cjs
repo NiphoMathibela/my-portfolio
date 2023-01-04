@@ -11,7 +11,8 @@ module.exports = {
       "white": "#FFFCEC",
       "yellow": "#FFE86D",
       "gray": "#D9D9D9",
-      "green": "#33FFA9"
+      "green": "#33FFA9",
+      "transparent": "transparent"
     },
     extend: {
       dropShadow: {
