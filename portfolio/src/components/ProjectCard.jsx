@@ -2,8 +2,8 @@ import React from "react";
 
 const ProjectCard = (props) => {
   return (
-    <div className="w-72 h-72 rounded-xl bg-black">
-      <h3 className= "font-bold text-3xl text-center mb-6">{props.title}</h3>
+    <div className="max-w-[32%] h-44 rounded-xl bg-black">
+      <h3 className= "font-bold text-xl text-center mb-6 text-white">{props.title}</h3>
     </div>
   );
 };
