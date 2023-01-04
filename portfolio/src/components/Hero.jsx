@@ -5,7 +5,7 @@ import FrontEndCard from './FrontEndCard'
 
 const Hero = () => {
   return (
-    <div className="p-8 md:flex justify-between h-screen">
+    <div className="h-full p-8 mb-10 md:flex md:justify-between">
       <Title className="" />
       <DecorCard />
       <FrontEndCard />
