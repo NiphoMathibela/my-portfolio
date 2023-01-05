@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import nodemailer from 'nodemailer'
 
 const ContactForm = props => {
 
@@ -19,7 +20,29 @@ const ContactForm = props => {
     console.log(formInput)
   }
 
-  let showForm = props.showForm
+
+const transporter = nodemailer.createTransport({
+  service: 'gmail',
+  auth: {
+    user: 'niphoexcellent28@gmail.com',
+    pass: process.env.PWD
+  }
+});
+
+const mailOptions = {
+  from: 'niphosprofile@gmail.com',
+  to: 'nmathibela2801gmail.com',
+  subject: formInput.subject,
+  text: formInput.message
+};
+
+transporter.sendMail(mailOptions, (error, info) => {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Email sent: ' + info.response);
+  }
+}); 
 
 
   return (
