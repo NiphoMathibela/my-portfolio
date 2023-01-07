@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import nodemailer from 'nodemailer'
 
 const ContactForm = props => {
 
@@ -20,30 +19,27 @@ const ContactForm = props => {
     console.log(formInput)
   }
 
-
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: 'niphoexcellent28@gmail.com',
-    pass: process.env.PWD
-  }
-});
-
-const mailOptions = {
-  from: 'niphosprofile@gmail.com',
-  to: 'nmathibela2801gmail.com',
-  subject: formInput.subject,
-  text: formInput.message
-};
-
-transporter.sendMail(mailOptions, (error, info) => {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Email sent: ' + info.response);
-  }
-}); 
-
+  const submitEmail = async (e) => {
+    e.preventDefault();
+    console.log({ formInput });
+    const response = await fetch("http://localhost:3000/send", {
+      method: "POST",
+      headers: {
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({ formInput }),
+    })
+      .then((res) => res.json())
+      .then(() => {
+        setFormInput({
+          email: "",
+          name: "",
+          message: "",
+          subject: "",
+        });
+      });
+  };
+ 
 
   return (
     <div className='z-20 m-auto h-68 w-full bg-black bottom-28 rounded-lg p-2 max-w-[630px]'>
@@ -59,7 +55,7 @@ transporter.sendMail(mailOptions, (error, info) => {
 
       <textarea type="text" name="message" placeholder='Enter your message' value={formInput.message} onChange={formData} className="w-full rounded-lg h-full bg-transparent p-2 mr-auto block border-solid border-gray border-2 mb-4 focus:outline-none focus:border-green" />
 
-      <button className="max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animation-pulse">
+      <button className="max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animation-pulse" onClick= {submitEmail}>
         Send
       </button>
     </div>
