@@ -18,7 +18,7 @@ const Contact = () => {
           Interested in working together? We should queue up a time to chat.
         </p>
         <button className="max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animation-pulse" onClick={toggleForm}>
-          {show ? "Close Form" : "Contact me"}
+          {show ? "Close" : "Contact me"}
         </button>
       </div>
 

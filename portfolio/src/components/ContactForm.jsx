@@ -30,15 +30,25 @@ const ContactForm = props => {
       body: JSON.stringify({ formInput }),
     })
       .then((res) => res.json())
+      .then(async (res) => {
+        const resData = await res;
+        console.log(resData);
+        if (resData.status === "sent") {
+          alert("Message Sent");
+        } else if (resData.status === "failed") {
+          alert("Message failed to send");
+        }
+      })
       .then(() => {
         setFormInput({
           email: "",
           name: "",
           message: "",
-          subject: "",
+          subject: ""
         });
       });
   };
+ 
  
 
   return (

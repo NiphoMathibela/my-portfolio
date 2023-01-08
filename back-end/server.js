@@ -1,8 +1,12 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
-
+const cors = require("cors")
 const app = express()
 require("dotenv").config()
+
+// middleware
+app.use(express.json());
+app.use(cors());
 
 let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -23,27 +27,27 @@ let transporter = nodemailer.createTransport({
       : console.log(`=== Server is ready to take messages: ${success} ===`);
    });
 
-   let mailOptions = {
-    from: "test@gmail.com",
-    to: process.env.EMAIL,
-    subject: "Nodemailer API",
-    text: "Hi from your nodemailer API",
-   };
+   app.get("/", (req, res) => {
+    res.send("Stuff is happening")
+   })
 
    app.post("/send", (req, res) => {
     let mailOptions = {
-      from: "test@gmail.com",
+      from: `${req.body.formInput.email}`,
       to: process.env.EMAIL,
-      subject: "Nodemailer API",
-      text: "Hi from your nodemailer API",
+      subject: `${req.body.formInput.subject} From ${req.body.formInput.email}`,
+      text: `${req.body.formInput.name}: ${req.body.formInput.message}`,
     };
    
     transporter.sendMail(mailOptions, (err, data) => {
       if (err) {
-        console.log("Error " + err);
+        res.json({
+          status : "failed"
+        })
+
       } else {
         console.log("Email sent successfully");
-        res.json({ status: "Email sent" });
+        res.json({ status: "sent" });
       }
     });
    });
