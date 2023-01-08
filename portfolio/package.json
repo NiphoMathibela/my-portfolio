@@ -25,6 +25,7 @@
     "tailwindcss": "^3.2.4",
     "vite": "^4.0.0"
   },
+  "proxy": "http://localhost:3000",
   "description": "Email API",
   "main": "vite.config.js",
   "author": "NE Mathibela",

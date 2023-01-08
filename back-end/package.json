@@ -5,8 +5,13 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "cd portfolio && npm install && npm run build"
   },
+  
+"engines": {
+  "node": "v16.15.1"
+},
   "author": "NE Mathibela",
   "license": "ISC",
   "dependencies": {
