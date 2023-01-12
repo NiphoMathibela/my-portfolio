@@ -52,9 +52,7 @@ let transporter = nodemailer.createTransport({
     });
    });
    
-   
-   
-   app.listen(8393, "https://portfolioapi-23ya.onrender.com", () => {
+   app.listen(8393, () => {
     console.log("Server is running")
 })
    
