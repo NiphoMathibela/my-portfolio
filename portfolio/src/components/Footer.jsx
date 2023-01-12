@@ -15,19 +15,19 @@ const Footer = () => {
       <div className="flex space-between justify-center">
 
         <div className="w-20 m-4">
-          <AiFillGithub className='text-4xl' />
+          <a href="https://github.com/NiphoMathibela"><AiFillGithub className='text-4xl' /></a>
         </div>
 
         <div className="w-20 m-4">
-          <AiFillLinkedin className='text-4xl' />
+          <a href="https://www.linkedin.com/in/nipho-mathibela-928aba1bb/"><AiFillLinkedin className='text-4xl' /></a>
         </div>
 
         <div className="w-20 m-4">
-          <AiFillTwitterCircle className='text-4xl' />
+          <a href="https://twitter.com/Niph0Mathibela"><AiFillTwitterCircle className='text-4xl' /></a>
         </div>
 
         <div className="w-20 m-4">
-          <AiFillInstagram className='text-4xl' />
+          <a href= "https://www.instagram.com/nipho.mathibela/"><AiFillInstagram className='text-4xl' /></a>
         </div>
       </div>
     </div>
