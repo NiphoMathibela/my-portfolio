@@ -1,15 +1,12 @@
 const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors")
-const path = require("path")
 const app = express()
 require("dotenv").config()
 
 // middleware
 app.use(express.json());
 app.use(cors());
-
-app.use(express.static(path.resolve(__dirname, '../portfolio/build')));
 
 let transporter = nodemailer.createTransport({
     service: "gmail",
@@ -30,9 +27,9 @@ let transporter = nodemailer.createTransport({
       : console.log(`=== Server is ready to take messages: ${success} ===`);
    });
 
-   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '../portfolio/build', 'index.html'));
-  });
+   app.get("/", (req, res) => {
+    res.send("Stuff is happening")
+   })
 
    app.post("/send", (req, res) => {
     let mailOptions = {
