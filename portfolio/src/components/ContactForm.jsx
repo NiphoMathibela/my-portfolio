@@ -22,7 +22,7 @@ const ContactForm = props => {
   const submitEmail = async (e) => {
     e.preventDefault();
     console.log({ formInput });
-    const response = await fetch("http://localhost:3000/send", {
+    const response = await fetch("https://portfolioapi-23ya.onrender.com/send", {
       method: "POST",
       headers: {
         "Content-type": "application/json",
