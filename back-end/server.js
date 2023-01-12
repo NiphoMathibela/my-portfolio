@@ -2,6 +2,7 @@ const express = require("express");
 const nodemailer = require("nodemailer");
 const cors = require("cors")
 const app = express()
+const PORT = process.env.PORT
 require("dotenv").config()
 
 // middleware
@@ -52,7 +53,7 @@ let transporter = nodemailer.createTransport({
     });
    });
    
-   app.listen(8393, () => {
+   app.listen(PORT, () => {
     console.log("Server is running")
 })
    
