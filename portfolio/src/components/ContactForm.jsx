@@ -73,7 +73,7 @@ const ContactForm = props => {
       <textarea type="text" name="message" placeholder='Enter your message' value={formInput.message} onChange={formData} className="w-full rounded-lg h-full bg-transparent p-2 mr-auto block border-solid border-gray border-2 mb-4 focus:outline-none focus:border-green" />
 
       <button className="min-w-16 max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animation-pulse" onClick= {submitEmail} disabled= {isLoading}>
-        {isLoading ? <span><img src = {loader} className= "h-6 w-6 inline-block mx-auto"/> Sending...</span> : "Send"}
+        {isLoading ? <span><img src = {loader} className= "h-6 w-6 inline-block mx-auto mr-2"/>Sending...</span> : "Send"}
       </button>
     </div>
   )
