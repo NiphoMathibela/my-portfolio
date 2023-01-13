@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import loader from "../assets/loader.gif"
 
 const ContactForm = props => {
 
@@ -8,6 +9,8 @@ const ContactForm = props => {
     subject: "",
     message: ""
   })
+
+  const [isLoading, setIsLoading] = useState(false)
 
   const formData = (e) => {
     setFormInput(prevData => {
@@ -21,6 +24,7 @@ const ContactForm = props => {
 
   const submitEmail = async (e) => {
     e.preventDefault();
+    setIsLoading(true)
     console.log({ formInput });
     const response = await fetch("https://nipho-mailapi.onrender.com/send", {
       method: "POST",
@@ -35,8 +39,11 @@ const ContactForm = props => {
         console.log(resData);
         if (resData.status === "sent") {
           alert("Message Sent");
+
+          setIsLoading(false)
         } else if (resData.status === "failed") {
           alert("Message failed to send");
+          setIsLoading(false)
         }
       })
       .then(() => {
@@ -65,8 +72,8 @@ const ContactForm = props => {
 
       <textarea type="text" name="message" placeholder='Enter your message' value={formInput.message} onChange={formData} className="w-full rounded-lg h-full bg-transparent p-2 mr-auto block border-solid border-gray border-2 mb-4 focus:outline-none focus:border-green" />
 
-      <button className="max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animation-pulse" onClick= {submitEmail}>
-        Send
+      <button className="min-w-16 max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animation-pulse" onClick= {submitEmail} disabled= {isLoading}>
+        {isLoading ? <span><img src = {loader} className= "h-7 w-7 block mx-auto"/> Sending...</span> : "Send"}
       </button>
     </div>
   )
