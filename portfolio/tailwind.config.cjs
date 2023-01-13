@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       dropShadow: {
-        "4xl": "0 35px 35px gray",
+        "4xl": "12 20px 20px gray",
       },
       boxShadow: {
         "4xl": "-24px 28px 0px rgba(0, 0, 0, 0.25);",
