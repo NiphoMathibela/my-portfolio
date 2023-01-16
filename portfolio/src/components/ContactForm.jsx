@@ -78,7 +78,7 @@ const ContactForm = props => {
   return (
     <div className='z-20 m-auto h-68 w-full bg-black bottom-28 rounded-lg p-2 max-w-[630px]'>
 
-      {errMessage ? <div classNmae="w-full mx-auto text-center my-4"><p className="text-green text-lg">Please fill in all the input boxes</p></div> : ""}
+      {errMessage ? <div classNmae="w-full mx-auto text-center "><p className="text-green text-lg p-4">Please fill in all the input boxes</p></div> : ""}
       <input type="text" name="name" placeholder='Enter your full name' value={formInput.name} onChange={formData} className="w-full rounded-lg h-full bg-transparent p-2 mr-auto block border-solid border-gray border-2 mb-4 focus:outline-none focus:border-green" />
 
 
