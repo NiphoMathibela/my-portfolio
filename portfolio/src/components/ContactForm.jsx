@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import loader from "../assets/loader.gif"
+import Alert from './Alert'
 
 const ContactForm = props => {
 
@@ -24,7 +25,8 @@ const ContactForm = props => {
 
   const submitEmail = async (e) => {
     e.preventDefault();
-    setIsLoading(true)
+    if(formInput.name || formInput.email || formInput.subject || formInput.message != ""){
+      setIsLoading(true)
     console.log({ formInput });
     const response = await fetch("https://nipho-mailapi.onrender.com/send", {
       method: "POST",
@@ -38,7 +40,7 @@ const ContactForm = props => {
         const resData = await res;
         console.log(resData);
         if (resData.status === "sent") {
-          alert("Message Sent");
+          alert("Message Sent")
 
           setIsLoading(false)
         } else if (resData.status === "failed") {
@@ -54,7 +56,19 @@ const ContactForm = props => {
           subject: ""
         });
       });
+    } else{
+      console.log("Thats tuff")
+    }
   };
+
+  const  handleSubmit = () => {
+    if(formInput.name || formInput.email || formInput.subject || formInput.message != ""){
+      submitEmail()
+    } else{
+      console.log(formInput.name, formInput.email, formInput.message, formInput.subject)
+      
+    }
+  }
  
  
 
