@@ -14,7 +14,7 @@ const Projects = () => {
       title: "Lomaway Website",
         description: "Comapny website for a constructtio comapany",
         url: "https://lomaway.onrender.com/",
-        img: "https://github.com/NiphoMathibela/my-portfolio/blob/master/portfolio/src/assets/Portfolio.png?raw=true"
+        img: "https://github.com/NiphoMathibela/my-portfolio/blob/master/portfolio/src/assets/Lomaway.png"
     }
 ]
 
