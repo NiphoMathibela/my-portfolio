@@ -28,6 +28,10 @@ const Technologies = () => {
             <div className= "bg-black w-20 h-20 text-white rounded-lg m-2 grow md:w-40 md:h-40">
                 <p className= "text-center font-bold text-2xl align-middle mt-6 md:text-4xl md:mt-14">REACT</p>
             </div>
+
+            <div className= "bg-black w-20 h-20 text-white rounded-lg m-2 grow md:w-40 md:h-40">
+                <p className= "text-center font-bold text-2xl align-middle mt-6 md:text-4xl md:mt-14">C#</p>
+            </div>
         </div>
     </div>
   );

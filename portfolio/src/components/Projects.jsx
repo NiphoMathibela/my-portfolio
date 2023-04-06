@@ -9,6 +9,12 @@ const Projects = () => {
         description: "",
         url: "https://nipho-mathibela.onrender.com/",
         img: "https://github.com/NiphoMathibela/my-portfolio/blob/master/portfolio/src/assets/Portfolio.png?raw=true"
+    },
+    {
+      title: "Lomaway Website",
+        description: "Comapny website for a constructtio comapany",
+        url: "https://lomaway.onrender.com/",
+        img: "https://github.com/NiphoMathibela/my-portfolio/blob/master/portfolio/src/assets/Portfolio.png?raw=true"
     }
 ]
 
