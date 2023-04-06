@@ -19,7 +19,7 @@ const Footer = () => {
         </div>
 
         <div className="w-20 m-4">
-          <a href="https://www.linkedin.com/in/nipho-mathibela-928aba1bb/"><AiFillLinkedin className='text-4xl' /></a>
+          <a href="https://www.linkedin.com/in/nipho/"><AiFillLinkedin className='text-4xl' /></a>
         </div>
 
         <div className="w-20 m-4">
