@@ -11,7 +11,7 @@ const Footer = () => {
 
       <h2 className="font-bold text-4xl m-auto text-center mt-8">Socials</h2>
 
-      <div className="flex space-between justify-center my-auto mx-auto">
+      <div className="flex flex-row space-between my-auto mx-auto w-fit">
 
         <div className="w-20 m-4">
           <a href="https://github.com/NiphoMathibela"><AiFillGithub className='text-4xl' /></a>
@@ -25,7 +25,7 @@ const Footer = () => {
           <a href="https://twitter.com/Niph0Mathibela"><AiFillTwitterCircle className='text-4xl' /></a>
         </div>
 
-        <div className="w-20 m-4">
+        <div className="w-18 m-4">
           <a href= "https://www.instagram.com/nipho.mathibela/"><AiFillInstagram className='text-4xl' /></a>
         </div>
       </div>
