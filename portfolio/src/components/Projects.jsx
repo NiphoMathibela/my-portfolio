@@ -17,6 +17,13 @@ const Projects = () => {
       tech: "HTML, CSS, JavaScript",
       url: "https://lomaway.onrender.com/",
       img: "https://github.com/NiphoMathibela/my-portfolio/blob/master/portfolio/src/assets/Lomaway.png?raw=true"
+    },
+    {
+      title: "UpWheel",
+      description: "Work in progress...Upwheel is a powerful, open-source car buying and selling platform built for passionate car enthusiasts. Ditch the impersonal classifieds and join a community where buying and selling is fueled by a shared love for the open road.",
+      tech: "React, TailwindCSS, ASP.NET, C#, RestfulAPI",
+      url: "https://upwheel.onrender.com/",
+      img: "https://github.com/NiphoMathibela/my-portfolio/blob/master/portfolio/src/assets/Lomaway.png?raw=true"
     }
   ]
 
