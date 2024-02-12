@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 
 function App() {
   return (
-    <div className="App bg-back">
+    <div className="App bg-[#F8FBF8]">
       <div className="max-w-5xl m-auto">
         <Hero />
         <GetToKnow />

@@ -17,7 +17,7 @@ const Contact = () => {
         <p className="md:m-4">
           Interested in working together? We should queue up a time to chat.
         </p>
-        <button className="max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animation-pulse" onClick={toggleForm}>
+        <button className="max-w-36 h-10 rounded-xl p-2 bg-green text-black m-4 font-bold animate-pulse duration-500" onClick={toggleForm}>
           {show ? "Close" : "Contact me"}
         </button>
       </div>
