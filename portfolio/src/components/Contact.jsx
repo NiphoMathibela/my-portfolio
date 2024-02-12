@@ -11,7 +11,7 @@ const Contact = () => {
     setShow((prev) => !prev);
   };
   return (
-    <div className="bg-black w-10/12 h-38 m-auto rounded-xl text-white text-center p-4 items-center z-10 ">
+    <div className="bg-black w-10/12 h-38 my-12 mx-auto rounded-xl text-white text-center p-4 items-center z-10 ">
       <div className="w-11/12 m-auto md:flex  md:items-center md:justify-center">
         <h2 className="font-bold text-xl md:text-3xl md:m-4">Get In Touch</h2>
         <p className="md:m-4">

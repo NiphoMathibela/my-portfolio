@@ -14,6 +14,7 @@ function App() {
         <GetToKnow />
         <Technologies />
         <Projects />
+        <Contact />
       </div>
       <Footer />
     </div>

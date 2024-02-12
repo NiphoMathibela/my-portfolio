@@ -7,12 +7,11 @@ import { AiFillInstagram } from "react-icons/ai"
 
 const Footer = () => {
   return (
-    <div className="w-full h-55 bg-gray mt-16">
-      <Contact />
+    <div className="w-[100%] h-64 bg-gray mt-16 py-10 mx-auto">
 
       <h2 className="font-bold text-4xl m-auto text-center mt-8">Socials</h2>
 
-      <div className="flex space-between justify-center">
+      <div className="flex space-between justify-center my-auto mx-auto">
 
         <div className="w-20 m-4">
           <a href="https://github.com/NiphoMathibela"><AiFillGithub className='text-4xl' /></a>
