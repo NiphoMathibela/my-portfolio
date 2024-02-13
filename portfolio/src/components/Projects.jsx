@@ -1,6 +1,7 @@
 import React from "react";
 import ProjectCard from "./ProjectCard";
 
+
 const Projects = () => {
 
   const projectsArray = [
@@ -32,6 +33,9 @@ const Projects = () => {
       <h2 className="font-bold text-3xl text-center mt-16">My Recent Work</h2>
       <div className="m-auto w-[80%] sm:w-9/12 mt-6 mb-6 flex flex-wrap justify-center">
         {projectsArray.map(project => <ProjectCard title={project.title} img={project.img} url={project.url} description={project.description} tech={project.tech} />)}
+      </div>
+      <div>
+
       </div>
     </>
   );
