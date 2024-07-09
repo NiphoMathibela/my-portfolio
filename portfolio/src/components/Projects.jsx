@@ -28,6 +28,13 @@ const Projects = () => {
       url: "https://upwheel.onrender.com/",
       git: "https://github.com/NiphoMathibela/CarBuyingApi",
       img: "https://github.com/NiphoMathibela/my-portfolio/blob/master/portfolio/src/assets/UpWheel%20Screenshot.png?raw=true"
+    },
+    {
+      title: "Khumalo Krafts",
+      description: "A thriving digital hub fostering collaboration and innovation for a future of sustainable agriculture powered by renewable energy.",
+      url: "https://st10460431.azurewebsites.net/",
+      git: "https://github.com/NiphoMathibela/KhumaloCrafts_WebApp.git",
+      img: ""
     }
   ]
 
