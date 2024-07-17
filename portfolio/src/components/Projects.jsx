@@ -31,7 +31,7 @@ const Projects = () => {
     },
     {
       title: "Khumalo Krafts",
-      description: "A thriving digital hub fostering collaboration and innovation for a future of sustainable agriculture powered by renewable energy.",
+      description: "Platform for artists & artisans to sell their creations & build a sustainable art business.",
       tech: "C# ASP.NET, Azure, HTML & CSS, SQL",
       url: "https://st10460431.azurewebsites.net/",
       git: "https://github.com/NiphoMathibela/KhumaloCrafts_WebApp.git",
